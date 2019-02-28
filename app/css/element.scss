@@ -16,10 +16,11 @@
     @include flex($direction);
 }
 
-@mixin panel($bgcolor:#fff,$padding:0,$margin:0,$height:95px,$txtPadding:0 32px,$color:#333,$fontSize:32px) {
+@mixin panel($margintop:10px,$bgcolor:#fff,$padding:0,$margin:0,$height:95px,$txtPadding:0 32px,$color:#333,$fontSize:32px) {
     background:$bgcolor;
     padding: $padding;
     margin: $margin;
+    margin-top: $margintop;
     >h4{
         height: $height;
         line-height: $height;

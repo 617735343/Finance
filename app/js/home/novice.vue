@@ -37,7 +37,6 @@ export default {
     @import '../../css/element.scss';
     .panel{
         @include panel;
-        margin-top: 10px;
         >h4{
             border-bottom: 1px solid #ddd;
         }
