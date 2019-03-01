@@ -6,6 +6,7 @@
         <borrow></borrow>
         <meney></meney>
         <product></product>
+        <lift></lift>
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import Novice from './novice.vue'
 import Borrow from './borrow.vue'
 import Meney from "./money.vue"
 import Product from "./product.vue"
+import Lift from './life.vue'
 export default {
   components: {
     Heador,
@@ -23,7 +25,8 @@ export default {
     Novice,
     Borrow,
     Meney,
-    Product
+    Product,
+    Lift
   }
 }
 </script>
