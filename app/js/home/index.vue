@@ -7,6 +7,8 @@
         <meney></meney>
         <product></product>
         <lift></lift>
+        <footor></footor>
+        <nav-bar></nav-bar>
     </div>
 </template>
 
@@ -18,6 +20,8 @@ import Borrow from './borrow.vue'
 import Meney from "./money.vue"
 import Product from "./product.vue"
 import Lift from './life.vue'
+import Footor from '../public/footer.vue'
+import NavBar from '../public/navbar.vue'
 export default {
   components: {
     Heador,
@@ -26,7 +30,9 @@ export default {
     Borrow,
     Meney,
     Product,
-    Lift
+    Lift,
+    Footor,
+    NavBar,
   }
 }
 </script>
