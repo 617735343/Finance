@@ -53,6 +53,10 @@ module.exports = env => {
           'vue-loader'
         ]
       }, {
+        test: /\.(woff|eot|ttf|png|jpe?g|gif|svg)(\?.*)?$/,
+        use: ['url-loader'],
+        // loader: 'url-loader?name=fonts/[name].[md5:hash:hex:7].[ext]'
+      },{
         test: /\.scss$/,
         oneOf: [{
           resourceQuery: /module/,
