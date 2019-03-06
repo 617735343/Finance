@@ -32,7 +32,7 @@ export default {
         padding-bottom: 60px;
         img{
             width: 32%;
-            
+            height: 260px;
             &:nth-child(2){
                 padding: 0 3px;
             }

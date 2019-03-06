@@ -1,5 +1,5 @@
 {
-  "name": "JDFinance",
+  "name": "Finance",
   "version": "1.0.0",
   "description": "component with vue 2.5 and es6",
   "main": "index.js",
@@ -80,6 +80,8 @@
     "write-file-webpack-plugin": "4.2.0"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.5",
     "cache-loader": "1.2.2",
     "css-loader": "1.0.0",
     "eslint": "4.19.1",
@@ -87,6 +89,7 @@
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "^3.0.1",
     "mini-css-extract-plugin": "0.4.1",
+    "mockjs": "^1.0.1-beta3",
     "node-sass": "4.9.2",
     "px2rem-loader": "0.1.9",
     "sass-loader": "7.0.3",

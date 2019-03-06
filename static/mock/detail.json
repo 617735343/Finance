@@ -1,0 +1,81 @@
+[
+    {
+        "ret": true,
+        "data": {
+            "id": "001",
+            "showList": {
+                "bimg": "//img30.360buyimg.com/cf/jfs/t1/29512/28/5842/147193/5c4428e8Ecb946e04/93e38ed6368e7e1e.jpg",
+                "txt": "恒温烘干",
+                "txt2": "UV杀菌"
+            },
+            "explainList": {
+                "title": "杀菌烘干声波电动牙刷",
+                "txt": "杀菌、消毒、烘干于一体超声波电动牙刷，杀菌率99.72%，专属水杯设计",
+                "support": "3950",
+                "raise": "325,898",
+                "reach": "326%"
+            },
+            "storyList": [
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/26942/23/6288/337638/5c4b12e6Eacc653de/e4c9ffc7025b6cac.jpg!q70.jpg.dpg"
+                },
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/16677/21/6127/465385/5c4b12ecE459f8c88/70a69101d33210d5.jpg!q70.jpg.dpg"
+                },
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/18179/33/6139/410005/5c4b12f4E40614dc3/d39f6588b4326fd6.jpg!q70.jpg.dpg"
+                },
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/25026/33/6202/269564/5c4b1303E7052344f/a65afba41179001e.jpg!q70.jpg.dpg"
+                }
+            ],
+            "reportList": {
+                "title": "2019-3-6 杀菌烘干声波电动牙刷",
+                "txt": "一筹杀菌烘干声波电动牙刷首发受到广大消费者喜爱。为了让更多的客户了解到我们，享受到首发价，我们申请项目延期至3月25号结束。持续发货中，项目延顺期间不影响原发货计划，一筹科技衷心感谢大家的支持。"
+            },
+            "navborList": {
+                "collection": "472",
+                "comment": "46"
+            }
+        }
+    },
+    {
+        "data": {
+            "id": "002",
+            "showList": {
+                "bimg": "//img30.360buyimg.com/cf/jfs/t1/15977/1/8309/137828/5c765ae5Ed54a4bb9/eda22e11747c62e5.jpg",
+                "txt": "等离子干燥",
+                "txt2": "语音操作"
+            },
+            "explainList": {
+                "title": "小泽净水洗碗机器人",
+                "txt": "净水净洗净存，省时省心省力----小泽带来更好的生活品质.72%，专属水杯设计",
+                "support": "6",
+                "raise": "8000",
+                "reach": "8%"
+            },
+            "storyList": [
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/10959/15/12717/462712/5c7c860cEa3f6b72e/57b1fb44a3c37299.jpg!q70.jpg.dpg"
+                },
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/11892/14/9527/144449/5c78f762E161c25dc/a96b36572083331a.jpg!q70.jpg.dpg"
+                },
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/10504/11/12328/494639/5c78f765E9f4a0fe0/7135b09352528b5c.jpg!q70.jpg.dpg"
+                },
+                {
+                    "img": "//img30.360buyimg.com/cf/jfs/t1/28473/19/8718/480675/5c78f769E5bdaa149/408e00c8f71423c7.jpg!q70.jpg.dpg"
+                }
+            ],
+            "reportList": {
+                "title": "2019-3-6 小泽净水洗碗机器人",
+                "txt": "用过浩泽洗碗机的小可爱们都觉得与洗碗机相见恨晚！！往后余生由小泽愿与您相伴喔~"
+            },
+            "navborList": {
+                "collection": "1104",
+                "comment": "9"
+            }
+        }
+    }
+]

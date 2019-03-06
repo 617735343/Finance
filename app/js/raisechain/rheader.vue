@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.header" v-show="show">
     <ul>
-      <li class="iconfont">&#xe625;</li>
+      <router-link to="/raise" tag="li" class="iconfont">&#xe625;</router-link>
       <li>故事</li>
       <li>回报</li>
       <li>报告</li>

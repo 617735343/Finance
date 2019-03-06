@@ -34,13 +34,22 @@ module.exports = env => {
   }
   return {
     entry: ['./app/js/viewport.js', './app/js/main.js'],
+
     devServer: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:9000',
+          pathRewrite: {'^/api' : '/static/mock'}
+        }
+      },
       contentBase: './dist',
       hot: true,
       compress: true,
       port: 9000,
       clientLogLevel: "none",
-      quiet: true
+      quiet: true,
+      // before: require('./static/mock'),//引入mock/index.js
+      
     },
     module: {
       rules: [{

@@ -29,7 +29,7 @@ export default new Router({
             name: "raise",
             component: Raise,
         }, {
-            path: "/raisechain/:id",
+            path: "/raisechain/:id?",
             name: "raisechain",
             component: RaiseChain,
         },
