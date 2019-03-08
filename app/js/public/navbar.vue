@@ -38,7 +38,7 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'me'}">
+        <router-link :to="to">
           <img
             src="//img12.360buyimg.com/jrpmobile/jfs/t3340/68/639059082/2591/800e2d6b/580f51cdN4caf20b2.png?width=66&height=66"
             alt
@@ -55,6 +55,23 @@ import Panel from "../core/panel.vue";
 export default {
   components: {
     Panel
+  },
+  data() {
+    return {
+
+    };
+  },
+  methods: {
+
+  },
+  computed: {
+    to() {
+      if (localStorage.getItem("username") == "未登录") {
+        return "/login";
+      } else {
+        return "/me";
+      }
+    }
   }
 };
 </script>
@@ -81,15 +98,15 @@ export default {
       a {
         text-decoration: none;
       }
-      img{
-          width: 44px;
-          height: 44px;
-          display: inline-block;
-          margin: 12px auto 6px;
+      img {
+        width: 44px;
+        height: 44px;
+        display: inline-block;
+        margin: 12px auto 6px;
       }
-      p{
-          font-size: 22px;
-          color: #656564;
+      p {
+        font-size: 22px;
+        color: #656564;
       }
     }
   }

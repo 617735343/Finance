@@ -43,19 +43,19 @@ export default {
             {
               id:"001",
               img:
-                "https://img30.360buyimg.com/cf/s250x250_jfs/t14881/283/656508232/143980/9b606acf/5a33a171N18c9c80a.jpg",
-              title: "双响炮蓝牙音箱",
-              price: "29.00",
-              progress: 172,
+                "//img30.360buyimg.com/cf/jfs/t1/19348/31/7070/145353/5c653117E3e158dbc/7cae91cb663e73e6.jpg!q70.jpg.dpg",
+              title: "杀菌烘干声波电动牙刷",
+              price: "33.00",
+              progress: 326,
               selected: true
             },
             {
               id:"002",
               img:
-                "https://img30.360buyimg.com/cf/s250x250_jfs/t15529/308/632300625/135123/adb9c6d0/5a37676dNc31da9ea.jpg",
-              title: "脑波相机",
-              price: "998.00",
-              progress: 259
+                "//img30.360buyimg.com/cf/jfs/t1/17054/26/8492/144711/5c765aedEc7552148/b1ed02a72bc7d372.jpg!q70.jpg.dpg",
+              title: "小泽净水洗碗机器人",
+              price: "1999.00",
+              progress: 8
             }
           ]
         },
@@ -66,18 +66,18 @@ export default {
             {
               id:"003",
               img:
-                "https://img30.360buyimg.com/cf/s250x250_jfs/t11257/287/2281727659/55759/e00b90a/5a138f21N32dca834.jpg",
-              title: "智能电动牙刷",
-              price: "19.00",
-              progress: 481
+                "//img30.360buyimg.com/cf/jfs/t1/30158/8/1424/107208/5c4c13a8Ebe1a36b8/69a17c05a5f5f52a.jpg!q70.jpg.dpg",
+              title: "艾秀无线按摩红外热敷智能眼罩",
+              price: "198.00",
+              progress: 56
             },
             {
               id:"004",
               img:
-                "https://img30.360buyimg.com/cf/s250x250_jfs/t14209/293/662014092/61635/bba5c330/5a33a983N077cac56.jpg",
-              title: "烟草加热电子烟",
-              price: "258.00",
-              progress: 105
+                "//img30.360buyimg.com/cf/jfs/t1/21396/38/8109/127502/5c7378b1E12df7d91/88b3849cf09c6a7d.jpg!q70.jpg.dpg",
+              title: "觅光者智能云镜",
+              price: "799.00",
+              progress: 39
             }
           ]
         },
@@ -88,18 +88,18 @@ export default {
             {
               id:"005",
               img:
-                "https://img30.360buyimg.com/cf/s250x250_jfs/t15007/47/884045069/149879/17987250/5a3cb182N15868ea1.jpg",
-              title: "赖公高淮封藏老酒",
-              price: "99.00",
-              progress: 199
+                "//img30.360buyimg.com/cf/jfs/t1/9479/9/16001/148876/5c74e1b0Ecf2b2875/a8784fadd2fb5dba.jpg!q70.jpg.dpg",
+              title: "WMF智巧种植盆 私人田园",
+              price: "399.00",
+              progress: 2
             },
             {
               id:"006",
               img:
-                "https://img30.360buyimg.com/cf/s250x250_jfs/t14197/160/546457496/134173/4e1baccd/5a30ccc5Na44f7492.jpg",
-              title: "泗洪花雕醉蟹",
-              price: "58.00",
-              progress: 222
+                "//img30.360buyimg.com/cf/jfs/t1/23996/1/2837/142994/5c21cd71E1c670bf8/1b02bd035bc98000.jpg!q70.jpg.dpg",
+              title: "宜居云智能面包机",
+              price: "299.00",
+              progress: 109
             }
           ]
         }
@@ -143,6 +143,9 @@ export default {
             font-family: PingFangSC-Medium;
             font-size: 28px;
             color: #444;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
           .price {
             font-family: PingFangSC-Semibold;

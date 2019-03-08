@@ -5,6 +5,9 @@ import Money from "../money/index.vue"
 import Ious from "../ious/index.vue"
 import Raise from "../raise/index.vue"
 import RaiseChain from "../raisechain/index.vue"
+import Me from "../me/index.vue"
+import Login from "../login/index.vue"
+import Register from "../register"
 import "../../css/reset.scss"
 
 
@@ -29,9 +32,25 @@ export default new Router({
             name: "raise",
             component: Raise,
         }, {
-            path: "/raisechain/:id?",
+            path: "/raisechain/:id",
             name: "raisechain",
             component: RaiseChain,
+        }, {
+            path: "/me",
+            name: "me",
+            component: Me,
+        }, {
+            path: "/login",
+            name: "login",
+            component: Login,
+        }, {
+            path: "/register",
+            name: "register",
+            component: Register,
         },
     ],
+    //每次做路由切换的时候，我都让切换的页面初始值x轴为0，y轴为0
+    scrollBehavior(to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    }
 })

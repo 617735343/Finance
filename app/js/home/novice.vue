@@ -60,7 +60,7 @@ export default {
                     line-height: 40px;
                 }
                 .red{
-                    color: #ff0000;
+                    color: #ef7d00;
                 }
                 .gray{
                     color: #999;

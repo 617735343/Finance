@@ -2,23 +2,23 @@
   <panel title="产品说明" :class="$style.panel">
     <section :class="$style.content">
       <div :class="$style.title">
-        <p>第五代智能鼾声伴侣</p>
-        <p>智能精准检测鼾声，分析睡眠质量！</p>
+        <p>{{this.explainList.title}}</p>
+        <p>{{this.explainList.txt}}</p>
       </div>
       <div :class="$style.items">
         <div :class="$style.item">
-          <p :class="$style.num">618</p>
+          <p :class="$style.num">{{this.explainList.support}}</p>
           <p :class="$style.txt">支持人数</p>
         </div>
         <div :class="$style.item">
           <p :class="$style.num">
             <em>￥</em>
-            123,737
+            {{this.explainList.raise}}
           </p>
           <p :class="$style.txt">已筹金额</p>
         </div>
         <div :class="$style.item">
-          <p :class="$style.num">124%</p>
+          <p :class="$style.num">{{this.explainList.reach}}</p>
           <p :class="$style.txt">达成率</p>
         </div>
       </div>
@@ -31,6 +31,9 @@ import Panel from "../core/panel.vue";
 export default {
   components: {
     Panel
+  },
+  props: {
+    explainList: Object
   }
 };
 </script>
@@ -45,6 +48,7 @@ export default {
   left: 0;
   top: 710px;
   background-color: transparent;
+  z-index: 99;
   > h4 {
     display: none;
   }
@@ -82,6 +86,9 @@ export default {
       }
       p {
         color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         &:first-child {
           font-size: 40px;
           font-weight: 700;

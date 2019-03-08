@@ -1,8 +1,8 @@
 <template>
   <Panel title="项目报告" :class="$style.panel">
     <section :class="$style.content">
-      <p :class="$style.title">2019-3-6 HEAGS赫格无影读写台灯</p>
-      <p :class="$style.txt">这是一款有多位资深的照明行业人士的具设计研发的一款具有多个专利的专业读写台灯。</p>
+      <p :class="$style.title">{{this.reportList.title}}</p>
+      <p :class="$style.txt">{{this.reportList.txt}}</p>
       <div>申请0元试用</div>
     </section>
   </Panel>
@@ -13,6 +13,9 @@ import Panel from "../core/panel.vue";
 export default {
   components: {
     Panel
+  },
+  props: {
+    reportList: Object
   }
 };
 </script>
@@ -31,25 +34,33 @@ export default {
       font-size: 28px;
       color: #333;
       margin-top: 15px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
     .txt {
-      padding-top: 0.266667rem;
-      margin-bottom: 0.266667rem;
-      line-height: 35px;
-      max-height: 87px;
-      font-size: 24px;
-      color: #444;
+      display: block;
+      display: -webkit-box;
+      // max-width: 400px;
+      height: 109.2px;
+      // margin: 0 auto;
+      font-size: 26px;
+      line-height: 1.4;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
       overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 20px 0;
     }
-    div{
-        width: 157px;
-        height: 42px;
-        color: #fff;
-        background-color: #000;
-        text-align: center;
-        line-height: 42px;
-        font-size: 20px;
-        margin-top: 10px;
+    div {
+      width: 157px;
+      height: 42px;
+      color: #fff;
+      background-color: #000;
+      text-align: center;
+      line-height: 42px;
+      font-size: 20px;
+      margin-top: 10px;
     }
   }
 }

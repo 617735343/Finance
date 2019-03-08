@@ -1,11 +1,11 @@
 <template>
   <div>
     <heador :show="show"></heador>
-    <show></show>
-    <explain></explain>
-    <story></story>
-    <report></report>
-    <navbor :show="show"></navbor>
+    <show :showList="showList"></show>
+    <explain :explainList="explainList"></explain>
+    <story :storyList="storyList"></story>
+    <report :reportList="reportList"></report>
+    <navbor :show="show" :navborList="navborList"></navbor>
   </div>
 </template>
 
@@ -28,23 +28,43 @@ export default {
   },
   data() {
     return {
-      show: false
+      show: false,
+      showList: {},
+      explainList:{},
+      storyList:[],
+      reportList:{},
+      navborList:{}
     };
   },
   methods: {
     getRaiseChainInfo() {
       console.log(axios);
-    
-      axios.get("/api/detail.json").then(this.handleGetRaiseChainInfo);
-      //   params: {
-      //     id: this.$route.params.id
-      //   }
+
+      axios
+        .get("/api/detail.json", {
+          params: {
+            id: this.$route.params.id
+          }
+        })
+        .then(this.handleGetRaiseChainInfo);
     },
     handleGetRaiseChainInfo(res) {
-      console.log(res.data);
+      const data = res.data;
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].id == this.$route.params.id) {
+          console.log(data[i]);
+          this.showList = data[i].data.showList;
+          this.explainList = data[i].data.explainList;
+          this.storyList = data[i].data.storyList;
+          this.reportList = data[i].data.reportList;
+          this.navborList = data[i].data.navborList;
+        }
+      }
     }
   },
   mounted() {
+    this.getRaiseChainInfo();
     window.addEventListener("scroll", () => {
       const scrollTop =
         document.body.scrollTop || document.documentElement.scrollTop;
@@ -56,7 +76,6 @@ export default {
         this.show = false;
       }
     });
-    this.getRaiseChainInfo();
   }
 };
 </script>

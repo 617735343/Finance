@@ -99,8 +99,8 @@ export default {
         color: #333;
         .red {
           font-size: 22px;
-          color: #ff5155;
-          border: 1px solid #ff5155;
+          color: #ef7d00;
+          border: 1px solid #ef7d00;
           padding: 0 8px;
           vertical-align: 1px;
           margin-left: 2px;
@@ -112,7 +112,7 @@ export default {
           font-size: 44px;
           height: 58px;
           line-height: 58px;
-          color: #ff5155;
+          color: #ef7d00;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;

@@ -3,7 +3,7 @@
     <ul>
       <li>
           <img src="../../../static/收 藏.png" alt="">
-          <p>收藏 312</p>
+          <p>收藏 {{this.navborList.collection}}</p>
       </li>
       <li>
           <i class="iconfont">&#xe622;</i>
@@ -11,9 +11,9 @@
       </li>
       <li>
           <i class="iconfont">&#xe62f;</i>
-          <p>评论 39</p>
+          <p>评论 {{this.navborList.comment}}</p>
       </li>
-      <li>去支持</li>
+      <li @click="handleAddSupport()">去支持</li>
     </ul>
   </div>
 </template>
@@ -21,7 +21,18 @@
 <script>
 export default {
     props: {
-        show: Boolean
+        show: Boolean,
+        navborList:Object
+    },
+    methods: {
+        handleAddSupport(){
+            if(localStorage.getItem("username") == '未登录'){
+                this.$router.push('/login');
+                alert("你还没登录账号，请登录");
+            }else{
+                alert("加入购物车")
+            }
+        }
     }
 };
 </script>

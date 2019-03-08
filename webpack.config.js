@@ -39,10 +39,11 @@ module.exports = env => {
       proxy: {
         '/api': {
           target: 'http://localhost:9000',
-          pathRewrite: {'^/api' : '/static/mock'}
+          pathRewrite: {'^/api' : '/mock'}
         }
       },
-      contentBase: './dist',
+      contentBase: path.join(__dirname, 'static'),
+      // contentBase: './dist',
       hot: true,
       compress: true,
       port: 9000,
