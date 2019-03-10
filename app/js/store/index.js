@@ -9,12 +9,30 @@ export default new Vuex.Store({
     actions: {
         changeUsername(ctx,username) {
             ctx.commit('changeUsername',username);
+        },
+        changeGoods(ctx,obj){
+            ctx.commit('changeGoods',obj);
         }
     },
     mutations: {
         changeUsername(state,username){
             state.username = username;
             localStorage.username = username;
+        },
+        changeGoods(state,obj){
+            // state.goodsObject.img = obj.img;
+            // state.goodsObject.title = obj.title;
+            // state.goodsObject.price = obj.price;
+            state.goodsList.push(obj);
+            const list = JSON.stringify(state.goodsList);
+            // if(localStorage.goods){
+            //     let lists = JSON.parse(localStorage.getItem("goods"));
+            //     lists.push(list);
+            //     const strings = JSON.stringify(lists);
+            //     localStorage.setItem("goods",strings);
+            // }else{
+                localStorage.setItem("goods",list);
+            // }
         }
     }
 })

@@ -2,39 +2,88 @@
   <div :class="$style.header" v-show="show">
     <ul>
       <li>
-          <img src="../../../static/收 藏.png" alt="">
-          <p>收藏 {{this.navborList.collection}}</p>
+        <img src="../../../static/收 藏.png" alt>
+        <p>收藏 {{this.navborList.collection}}</p>
       </li>
       <li>
-          <i class="iconfont">&#xe622;</i>
-          <p>分享</p>
+        <i class="iconfont">&#xe622;</i>
+        <p>分享</p>
       </li>
       <li>
-          <i class="iconfont">&#xe62f;</i>
-          <p>评论 {{this.navborList.comment}}</p>
+        <i class="iconfont">&#xe62f;</i>
+        <p>评论 {{this.navborList.comment}}</p>
       </li>
-      <li @click="handleAddSupport()">去支持</li>
+      <li :style="{backgroundColor: color}" @click="handleAddSupport()" ref="add">加入购物车</li>
     </ul>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-    props: {
-        show: Boolean,
-        navborList:Object
-    },
-    methods: {
-        handleAddSupport(){
-            if(localStorage.getItem("username") == '未登录'){
-                this.$router.push('/login');
-                alert("你还没登录账号，请登录");
-            }else{
-                alert("加入购物车")
+  props: {
+    show: Boolean,
+    navborList: Object,
+    showList: Object,
+    explainList: Object
+  },
+  data() {
+    return {
+      goodsObject: {
+        img: "",
+        title: "",
+        price: ""
+      },
+      color: "#bd9474",
+      goodsList: []
+    };
+  },
+  methods: {
+    handleAddSupport() {
+      if (localStorage.getItem("username") == "未登录") {
+        this.$router.push("/login");
+        alert("你还没登录账号，请登录");
+      } else {
+        let getgoods = "";
+        if (localStorage.goods) {
+          getgoods = localStorage.getItem("goods");
+
+          const goods = JSON.parse(getgoods);
+          for (let i = 0; i < goods.length; i++) {
+            if (goods[i].title == this.explainList.title) {
+              alert("购物车中已有该商品");
+              this.color = "black";
+              return;
             }
+          }
         }
-    }
-};
+        alert("成功加入购物车");
+        this.goodsObject.img = this.showList.bimg;
+        this.goodsObject.title = this.explainList.title;
+        this.goodsObject.price = this.explainList.price;
+        this.changeGoods(this.goodsObject);
+        this.$emit("change", localStorage.getItem("goods"));
+        this.color = "black";
+      }
+    },
+    ...mapActions(["changeGoods"])
+  },
+  mounted() {
+      let getgoods = "";
+        if (localStorage.goods) {
+          getgoods = localStorage.getItem("goods");
+
+          const goods = JSON.parse(getgoods);
+          for (let i = 0; i < goods.length; i++) {
+            if (goods[i].title == this.explainList.title) {
+              alert("购物车中已有该商品");
+              this.color = "black";
+              return;
+            }
+          }
+        }
+  }
+}
 </script>
 
 <style lang="scss" module>
@@ -57,15 +106,15 @@ export default {
       font-size: 24px;
       height: 50px;
       align-self: center;
-      img{
-          width: 32px;
-          height: 34px;
+      img {
+        width: 32px;
+        height: 34px;
       }
-      i{
-          font-size: 36px;
+      i {
+        font-size: 36px;
       }
-      p{
-          font-size: 18px;
+      p {
+        font-size: 18px;
       }
       &:last-child {
         flex: 2;

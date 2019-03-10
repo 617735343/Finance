@@ -5,7 +5,8 @@
     <explain :explainList="explainList"></explain>
     <story :storyList="storyList"></story>
     <report :reportList="reportList"></report>
-    <navbor :show="show" :navborList="navborList"></navbor>
+    <navbor @change="handleGetGoods" :show="show" :navborList="navborList" :showList="showList" :explainList="explainList"></navbor>
+    <goods :show="show" :getgoods="getgoods"></goods>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Explain from "./explain.vue";
 import Story from "./story.vue";
 import Report from "./report.vue";
 import Navbor from "./rnavbar.vue";
+import Goods from "./goods.vue";
 import axios from "axios";
 export default {
   components: {
@@ -24,11 +26,13 @@ export default {
     Explain,
     Story,
     Report,
-    Navbor
+    Navbor,
+    Goods
   },
   data() {
     return {
       show: false,
+      getgoods: "",
       showList: {},
       explainList:{},
       storyList:[],
@@ -61,6 +65,9 @@ export default {
           this.navborList = data[i].data.navborList;
         }
       }
+    },
+    handleGetGoods(getgoods){
+      this.getgoods = getgoods;
     }
   },
   mounted() {

@@ -7,7 +7,8 @@ import Raise from "../raise/index.vue"
 import RaiseChain from "../raisechain/index.vue"
 import Me from "../me/index.vue"
 import Login from "../login/index.vue"
-import Register from "../register"
+import Register from "../register/index.vue"
+import Goods from "../goods/index.vue"
 import "../../css/reset.scss"
 
 
@@ -47,6 +48,10 @@ export default new Router({
             path: "/register",
             name: "register",
             component: Register,
+        }, {
+            path: "/goods",
+            name: "goods",
+            component: Goods,
         },
     ],
     //每次做路由切换的时候，我都让切换的页面初始值x轴为0，y轴为0
