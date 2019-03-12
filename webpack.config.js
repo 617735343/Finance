@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = env => {
   if (!env) {
@@ -29,12 +29,15 @@ module.exports = env => {
       }),
       new ExtractTextPlugin("style.css", {
         ignoreOrder: true
+      }),
+      new UglifyJsPlugin({
+        sourceMap: true
       })
     )
   }
   return {
     entry: ['./app/js/viewport.js', './app/js/main.js'],
-
+    devtool: 'source-map',
     devServer: {
       proxy: {
         '/api': {
