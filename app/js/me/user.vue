@@ -17,7 +17,7 @@ import { mapState,mapActions } from "vuex"
 export default {
     data() {
         return {
-            show: true,
+            show: false,
             localUsername: "",
         }
     },
@@ -34,6 +34,7 @@ export default {
             this.localUsername = localStorage.getItem("username");
             alert("已退出登录");
             this.$emit("change",this.localUsername);
+            localStorage.removeItem('goods');
         },
         ...mapActions(["changeUsername"])
     },

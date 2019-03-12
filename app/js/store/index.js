@@ -33,6 +33,16 @@ export default new Vuex.Store({
             // }else{
                 localStorage.setItem("goods",list);
             // }
+        },
+        changeDelete(state,obj){
+            console.log(obj) //[1,3]
+           
+            console.log(state.goodsList)
+            for(let i=obj.length-1;i>=0;i--){
+                    state.goodsList.splice(obj[i],1);
+                    const list = JSON.stringify(state.goodsList);
+                    localStorage.setItem('goods',list);
+            }
         }
     }
 })

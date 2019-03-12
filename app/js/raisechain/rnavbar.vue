@@ -32,7 +32,8 @@ export default {
       goodsObject: {
         img: "",
         title: "",
-        price: ""
+        price: "",
+        num: ""
       },
       color: "#bd9474",
       goodsList: []
@@ -61,6 +62,7 @@ export default {
         this.goodsObject.img = this.showList.bimg;
         this.goodsObject.title = this.explainList.title;
         this.goodsObject.price = this.explainList.price;
+        this.goodsObject.num = this.explainList.num;
         this.changeGoods(this.goodsObject);
         this.$emit("change", localStorage.getItem("goods"));
         this.color = "black";

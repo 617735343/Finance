@@ -15,9 +15,13 @@ try {
 }
 try {
     if (localStorage.goods) {
-        goodsList = goodsList.push(JSON.price(localStorage.getItem("goods")));
+
+        console.log(JSON.parse(localStorage.getItem("goods")))
+        goodsList = JSON.parse(localStorage.getItem("goods"));
+        console.log(goodsList)
     }
 } catch (error) {
+    console.log(error)
 
 }
 
