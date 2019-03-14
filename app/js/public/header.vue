@@ -26,7 +26,11 @@ export default {
     btn
   },
   mounted() {
-    this.localUsernames = localStorage.getItem("username");
+    if (localStorage.username) {
+      this.localUsernames = localStorage.getItem("username");
+    }else{
+      this.localUsernames = '未登录';
+    }
   },
   watch: {
     localUsernames() {

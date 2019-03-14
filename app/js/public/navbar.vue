@@ -57,19 +57,19 @@ export default {
     Panel
   },
   data() {
-    return {
-
-    };
+    return {};
   },
-  methods: {
-
-  },
+  methods: {},
   computed: {
     to() {
-      if (localStorage.getItem("username") == "未登录") {
+      if (localStorage.username) {
+        if (localStorage.getItem("username") == "未登录") {
+          return "/login";
+        } else {
+          return "/me";
+        }
+      }else{
         return "/login";
-      } else {
-        return "/me";
       }
     }
   }
