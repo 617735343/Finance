@@ -1,4 +1,4 @@
-# vue-sell-cube
+# Finance
 
 ## Project setup
 ```
